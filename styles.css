@@ -1,19 +1,27 @@
-body {
+* {
     margin: 0;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: rgb(255, 0, 0);
-    min-height: 100vh;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    background: linear-gradient(to bottom right, #443f3f, #000000);
     color: white;
 }
 
 header {
-    padding: 0px 40px;
+    padding: 40px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
     z-index: 1;
-    box-shadow: 0px 5px 10x rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 2px 50px rgba(0, 0, 0, 0.182);
+}
+
+h2 {
+    font-size: 40px;
 }
 
 nav ul {
@@ -31,64 +39,85 @@ nav li {
 nav a {
     color: white;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 25px;
     letter-spacing: 0.5px;
     transition: 0.3s;
+    font-weight: 200;
 }
 
 nav a.active {
-    color: #ff0000;
+    color: #9a9a9a;
     font-weight: 600;
+}
+
+nav a:hover {
+    opacity: 0.7;
+    color: white;
+    font-weight: 700;
 }
 
 .hero {
     padding: 0px 40px;
+    margin-top: 50px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
+    min-height: 90vh;
     position: relative;
 }
 
 .text-container {
     max-width: 500px;
     margin-right: 80px;
+    margin-top: -250px;
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 6rem;
     line-height: 1.1;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 h1 span {
-    color: #ff0000;
+    color: #b1b1b1;
 }
 
 p {
-    font-size: 14px;
+    font-size: 18px;
     line-height: 1.6;
     margin-bottom: 40px;
 }
 
-button {
+.button {
     display: inline-block;
     padding: 15px 40px;
-    border: 2px solid #ff0000;
+    background: rgba(255, 255, 255, 0.189);
+    backdrop-filter: blur(10px);
     border-radius: 30px;
     color: white;
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 1px;
-    transition: 0.3s;
+    transition: 0.9s;
+    text-decoration: none;
 }
 
-button:hover {
-    background-color: #ff0000;
+.button:hover {
+    background-color: #ffffff;
+    color: black;
 }
 
-.shoes-image {
-    width: 450;
+.shoe-image {
+    width: 700px;
     height: auto;
-    margin-top: 50px;
+    margin-top: -100px;
+}
+
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .product-icons {
@@ -102,13 +131,10 @@ button:hover {
 }
 
 .icon {
-    width: 75px;
-    height: 75px;
-    margin-right: 30px;
-    box-shadow: 0 0 20px #8B0000;
-    background-color: #8B0000;
-    border: 1px solid #8B0000;
-    border-radius: 50%;
+    width: 200px;
+    height: 180px;
+    margin-right: 100px;
+    margin-top: -20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -117,39 +143,14 @@ button:hover {
 }
 
 .icon img {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background-color: #ccc;
-    border: 1px solid #8B0000;
+    width: 500px;
+    height: 150px;
+    margin-top: -20px;
+    object-fit: contain;
+    background-color: transparent;
+    border: 1px solid transparent;
 }
 
 .icon.active {
-    background: #ff0000;
-    border: 2px solid #ccc;
-}
-
-.more-button {
-    position: absolute;
-    bottom: 40px;
-    right: 40px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.arrow {
-    width: 15px;
-    height: 15px;
-    border-top: 2px solid white;
-    border-right: 2px solid white;
-    transform: rotate(45deg);
-    transition: 0.3s;
-}
-
-.more-button:hover .arrow {
-    border-color: #ff0000;
+    transform: scale(1.1);
 }
